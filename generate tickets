@@ -1,0 +1,19 @@
+def generate_ticket(airline,source,destination,no_of_passengers):
+    ticket_number_list=[]
+   
+    count=101
+    air="AI"
+    sour=source [0:3]
+    dest=destination[0:3]
+    for i in range(no_of_passengers):
+        ticket_number_list.append(air+":"+sour+":"+dest+":"+str(count))
+        count+=1
+    if(no_of_passengers>5):
+        return ticket_number_list[-5:]
+    if(no_of_passengers<5):
+        return ticket_number_list[:5]
+
+    
+
+#Provide different values for airline,source,destination,no_of_passengers and test your program
+print(generate_ticket("AI","Bangalore","London",7))
